@@ -1,0 +1,18 @@
+/* Radiation model for FSCK*/
+radiationModels/P1_FSCK/P1_FSCK.C
+radiationModels/fvDOM/fvDOM_FSCK/fvDOM_FSCK.C
+radiationModels/fvDOM/radiativeIntensityRay_FSCK/radiativeIntensityRay_FSCK.C
+/*radiationModels/fvDOM/Hybrid_FSCK/Hybrid_FSCK.C*/
+
+/* Absorption/Emission model */
+submodels/absorptionEmissionModel/kplanckAbsorptionEmission/kplanckAbsorptionEmission.C
+
+submodels/absorptionEmissionModel/fskTableFunction/fskTableFunction.C
+submodels/absorptionEmissionModel/fsckAbsorptionEmission/fsckAbsorptionEmission.C
+submodels/absorptionEmissionModel/kplanckFsckAbsorptionEmission/kplanckFsckAbsorptionEmission.C
+
+/* Boundary conditions */
+derivedFvPatchFields/MarshakRadiationFSCK/MarshakRadiationFSCKFvPatchScalarField.C
+derivedFvPatchFields/DiffusiveRadiationFSCK/DiffusiveRadiationFSCKMixedFvPatchScalarField.C
+
+LIB = $(FOAM_USER_LIBBIN)/libFSCKradiationModels
